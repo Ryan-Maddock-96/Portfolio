@@ -1,7 +1,11 @@
+import { GlobalStyles } from './Components/Styles/Global.style';
+import { Nav } from './Components/Styles/Navigation.style';
+
 function App() {
   return (
     <div className="App">
-      <div>hello you</div>
+      <GlobalStyles />
+      <Nav></Nav>
     </div>
   );
 }
