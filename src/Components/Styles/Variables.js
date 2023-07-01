@@ -1,3 +1,4 @@
+export const family = 'Poppins, sans-serif';
 export const primary_colour = '#1A2736';
 export const secondary_colour = '#1A2B40';
 export const text_primary_colour = '#C5D4E8';
