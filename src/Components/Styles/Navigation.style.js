@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import * as vars from './Variables';
-import { menuOpen, menuClose, fadeIn } from './Animations';
+import { menuLinks, fadeIn } from './Animations';
+import { ReactComponent as LogoSVG } from '../../images/logo.svg';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -8,26 +9,36 @@ export const StyledNav = styled.nav`
   display: flex;
   gap: 60px;
   align-items: center;
-  background-color: ${vars.secondary_colour};
   padding: 18px 150px;
-  box-sizing: border-box;
   position: absolute;
   top: 0;
   width: 100%;
   font-size: 24px;
-  height: 90px;
-  box-sizing: border-box;
-  flex-direction: ${(props) => (props.isMobile && props.isMenuOpen ? 'column' : 'row')};
-  animation: ${(props) =>
-    props.isMenuOpen
-      ? css`
-          1.5s ${menuOpen} forwards;
-        `
-      : 'none'};
+  height: ${(props) => (props.isMenuOpen ? '100%' : '90px')};
+  ${(props) =>
+    props.isMobile &&
+    props.isMenuOpen &&
+    css`
+      animation: 0.5s ease 0.3s ${menuLinks} forwards;
+    `};
 
-  &.closing {
-    animation: 1.5s ${menuClose} forwards;
-  }
+  ${(props) =>
+    props.isMobile &&
+    css`
+      &:before {
+        content: '';
+        height: 200vh;
+        width: 200vw;
+        position: absolute;
+        background: ${vars.secondary_colour};
+        top: -55vh;
+        right: -55vw;
+        border-radius: 50%;
+        transition: all 1.5s;
+        scale: ${props.isMenuOpening || props.isMenuOpen ? 1 : 0};
+        transform-origin: top right;
+      }
+    `}
 
   @media only screen and (max-width: 1200px) {
     padding: 18px 50px;
@@ -47,7 +58,11 @@ export const NavLinkHolder = styled.div`
     !props.isMobile || (props.isMobile && props.isMenuOpen) ? 'flex' : 'none'};
   opacity: ${(props) => (!props.isMobile ? 1 : 0)};
   flex-direction: ${(props) => (props.isMobile ? 'column' : 'row')};
-  animation: 1s ease-in 1s ${fadeIn} forwards;
+  ${(props) =>
+    props.isMenuOpen &&
+    css`
+      animation: 0.5s ease-in 0.5s ${fadeIn} forwards;
+    `};
   align-items: center;
   gap: 50px;
 `;
@@ -62,11 +77,26 @@ export const NavLink = styled.a`
   }
 `;
 
+export const LogoContainer = styled.div`
+  z-index: -1;
+  ${(props) =>
+    props.isMenuOpen &&
+    css`
+      animation: 1s ease 1s ${fadeIn} forwards;
+    `};
+`;
+
+export const Logo = styled(LogoSVG)`
+  width: ${(props) => (props.isMobile && !props.isMenuOpen ? '35px' : '50px')};
+  height: ${(props) => (props.isMobile && !props.isMenuOpen ? '35px' : '50px')};
+`;
+
 export const MenuIconOpen = styled(BiMenuAltRight)`
   font-size: 30px;
 `;
 
 export const MenuIconClosed = styled(AiOutlineClose)`
+  ${(props) => !props.isMenuOpen && 'display: none'};
   font-size: 30px;
   margin-top: 50px;
   opacity: 0;

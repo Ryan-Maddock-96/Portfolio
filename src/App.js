@@ -1,8 +1,11 @@
 import { useState } from 'react';
-import { GlobalStyles } from './Components/Styles/Global.style';
+import { GlobalStyles, Container } from './Components/Styles/Global.style';
 import Navigation from './Components/Navigation';
 import Header from './Components/Header';
 import { useEffect } from 'react';
+import Projects from './Components/Projects';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,7 +28,12 @@ const App = () => {
     <div className="App">
       <GlobalStyles />
       <Navigation isMobile={isMobile} />
-      <Header />
+      <Container>
+        <Header isMobile={isMobile} />
+        <Projects isMobile={isMobile} />
+        <Contact />
+      </Container>
+      <Footer />
     </div>
   );
 };

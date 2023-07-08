@@ -9,4 +9,10 @@ export const Button = styled.button`
   color: ${vars.text_primary_colour};
   font-family: ${vars.family};
   font-size: 18px;
+  ${(props) => props.alignSelf && `align-self: ${props.alignSelf}`};
+`;
+
+export const LinkButton = styled(Button).attrs({ as: 'a' })`
+  text-decoration: none;
+  text-align: center;
 `;

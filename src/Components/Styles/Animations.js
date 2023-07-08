@@ -1,8 +1,8 @@
 import { keyframes } from 'styled-components';
 
-export const menuOpen = keyframes`
-    0% {height: 90px;}
-    100%{height: 100%;}
+export const menuLinks = keyframes`
+    0% {flex-direction: row;}
+    100%{flex-direction: column;}
 `;
 
 export const menuClose = keyframes`
@@ -16,5 +16,5 @@ export const fadeIn = keyframes`
 opacity: 0;}
  100% { -webkit-transform: translateY(0);
     transform: translateY(0);
-opacity: 1; }
+opacity: 1; z-index: 1; }
 `;
