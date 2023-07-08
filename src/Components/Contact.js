@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Section } from './Styles/Global.style';
-import { Text } from './Styles/Text';
+import { SectionTitle, Text } from './Styles/Text';
 import { StyledForm, InputContainer } from './Styles/Forms';
 import Input from './Input';
 import { Button } from './Styles/Button.style';
@@ -20,8 +20,10 @@ function Contact() {
 
   return (
     <Section gap="25px" margin={`${sectionSpacing} 0 0`}>
-      {/* <Header3>Contact Me!</Header3> */}
-      <Text>Please feel free send me a message and I&apos;ll get back to you!</Text>
+      <SectionTitle>Contact Me!</SectionTitle>
+      <Text textAlign="center">
+        Please feel free send me a message and I&apos;ll get back to you!
+      </Text>
       <StyledForm onSubmit={submitHandler} ref={formRef}>
         <InputContainer>
           <Input type="text" name="name" labelText="Name:" />

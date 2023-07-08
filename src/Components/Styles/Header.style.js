@@ -1,6 +1,4 @@
-import styled, { css } from 'styled-components';
-import * as vars from './Variables';
-import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
+import styled from 'styled-components';
 import { Section } from './Global.style';
 
 export const StyledHeader = styled(Section)`
@@ -15,19 +13,4 @@ export const Socials = styled.div`
   align-items: center;
   text-align: center;
   margin: 25px 0 0;
-`;
-
-const SocialIconStyles = css`
-  font-size: 20px;
-  color: ${vars.text_secondary_colour};
-  vertical-align: middle;
-  margin: 0 5px 0 10px;
-`;
-
-export const Github = styled(FaGithubSquare)`
-  ${SocialIconStyles}
-`;
-
-export const Linkedin = styled(FaLinkedin)`
-  ${SocialIconStyles}
 `;

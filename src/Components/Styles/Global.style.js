@@ -46,3 +46,24 @@ export const Section = styled.section`
   ${(props) => props.gap && `gap: ${props.gap}`};
   ${(props) => props.alignItems && `align-items: ${props.alignItems}`};
 `;
+
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: ${(props) => (!props.column ? 'row' : 'column')};
+  ${(props) => props.grow && `flex-grow: ${props.grow}`};
+  ${(props) => props.gap && `gap: ${props.gap}`};
+  ${(props) => props.alignItems && `align-items: ${props.alignItems}`};
+  ${(props) => props.background && `background: ${props.background}`};
+  ${(props) => props.padding && `padding: ${props.padding}`};
+  ${(props) => props.margin && `margin: ${props.margin}`};
+  ${(props) => props.borderRadius && `border-radius: ${props.borderRadius}`};
+`;
+
+export const Link = styled.a`
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 5px;
+  }
+`;

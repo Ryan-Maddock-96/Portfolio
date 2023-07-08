@@ -1,5 +1,7 @@
 import { Header1, Text, Highlight } from './Styles/Text';
-import { Socials, StyledHeader, Linkedin, Github } from './Styles/Header.style';
+import { Socials, StyledHeader } from './Styles/Header.style';
+import { Linkedin, Github } from './Styles/Icons';
+import { Link } from './Styles/Global.style';
 
 // eslint-disable-next-line react/prop-types
 function Header({ isMobile }) {
@@ -17,10 +19,14 @@ function Header({ isMobile }) {
       </Text>
       <Socials>
         <Text>Connect With me:</Text>
-        <Github />
-        <Text>Github</Text>
-        <Linkedin />
-        <Text>Linkedin</Text>
+        <Link>
+          <Github />
+          <Text>Github</Text>
+        </Link>
+        <Link>
+          <Linkedin />
+          <Text>Linkedin</Text>
+        </Link>
       </Socials>
     </StyledHeader>
   );

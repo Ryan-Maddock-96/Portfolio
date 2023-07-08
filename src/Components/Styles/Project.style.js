@@ -17,7 +17,10 @@ export const ProjectContainer = styled.div`
   gap: 50px;
   width: 100%;
   background: ${vars.secondary_colour};
-  height: 270px;
+  border-radius: 10px;
+  background: #1a2837;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  height: 350px;
   border-radius: 10px;
   padding: 20px 30px;
 `;
@@ -31,7 +34,8 @@ export const ProjectImage = styled.div`
 
 export const ProjectInfo = styled.div`
   display: flex;
-  flex-direction column;
+  flex-direction: column;
   gap: 10px;
-  flex-grow: 1;
 `;
+
+export const ProjectTitle = styled.h3``;

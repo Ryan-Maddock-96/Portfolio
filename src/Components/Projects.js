@@ -45,7 +45,9 @@ function Projects({ isMobile }) {
   return (
     <Section gap="20px">
       <ProjectListContainer isMobile={isMobile}>
-        <SectionTitle textAlign="center">Latest Projects</SectionTitle>
+        <SectionTitle margin="0 0 65px" textAlign="center">
+          Latest Projects
+        </SectionTitle>
         {projectsList.map((proj, index) =>
           proj.name === 'placeholder' ? (
             <Project key={index} name={proj.name} />
@@ -55,6 +57,7 @@ function Projects({ isMobile }) {
               name={proj.name}
               description={proj.description}
               github={proj.github}
+              skills={proj.skills}
               date={getFormattedDate(proj.date || proj._createdAt)}
             />
           )

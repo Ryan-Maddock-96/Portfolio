@@ -17,6 +17,12 @@ export default {
         name: 'github',
         type: 'string',
         title: 'GitHub Link'
+      },
+      {
+        name: 'skills',
+        type: 'array',
+        of: [{type: 'string'}],
+        title: 'Technologies Used'
       }
     ]
   }
