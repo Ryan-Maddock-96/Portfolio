@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import Stars from './Components/Stars';
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -27,6 +28,7 @@ const App = () => {
   return (
     <div className="App">
       <GlobalStyles />
+      <Stars isMobile={isMobile} />
       <Navigation isMobile={isMobile} />
       <Container>
         <Header isMobile={isMobile} />

@@ -10,6 +10,11 @@ export const Button = styled.button`
   font-family: ${vars.family};
   font-size: 18px;
   ${(props) => props.alignSelf && `align-self: ${props.alignSelf}`};
+
+  &:hover {
+    box-shadow: 0px 0px 25px 0px rgba(18, 125, 239, 0.3);
+    cursor: pointer;
+  }
 `;
 
 export const LinkButton = styled(Button).attrs({ as: 'a' })`

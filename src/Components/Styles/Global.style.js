@@ -63,6 +63,14 @@ export const Link = styled.a`
   display: flex;
   align-items: center;
 
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
   svg {
     margin-right: 5px;
   }

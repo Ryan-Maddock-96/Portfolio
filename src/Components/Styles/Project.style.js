@@ -4,11 +4,11 @@ import * as vars from './Variables';
 export const ProjectListContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 75px;
   gap: 25px;
   border-radius: 40px;
   background: #192736;
-  box-shadow: 0px 0px 100px 0px rgba(18, 125, 239, 0.13);
+  box-shadow: 0px 0px 100px 0px rgba(18, 125, 239, 0.3);
   ${(props) => props.isMobile && 'width: 100%'};
 `;
 
@@ -23,6 +23,7 @@ export const ProjectContainer = styled.div`
   height: 350px;
   border-radius: 10px;
   padding: 20px 30px;
+  z-index: 2;
 `;
 
 export const ProjectImage = styled.div`

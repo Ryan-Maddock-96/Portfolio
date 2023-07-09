@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Project from './Project';
 import { ProjectListContainer } from './Styles/Project.style';
 import { Section } from './Styles/Global.style';
+import { Button } from './Styles/Button.style';
 import { SectionTitle } from './Styles/Text';
 
 let PROJECT_ID = '0coyf8rj';
@@ -62,6 +63,7 @@ function Projects({ isMobile }) {
             />
           )
         )}
+        <Button zindex="-1">View All</Button>
       </ProjectListContainer>
     </Section>
   );
