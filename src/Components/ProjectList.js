@@ -3,9 +3,8 @@ import imageUrlBuilder from '@sanity/image-url';
 import { ProjectListContainer } from './Styles/Project.style';
 import { useEffect } from 'react';
 import Project from './Project';
+import client from '../sanityClient';
 
-const PROJECT_ID = process.env.REACT_APP_SANITY_PROJECT_ID;
-const DATASET = process.env.REACT_APP_SANITY_DATASET;
 const QUERY = encodeURIComponent('*[_type == "project"]');
 
 const getFormattedDate = (date) => {
@@ -17,14 +16,13 @@ const getFormattedDate = (date) => {
 };
 
 const convertToDate = (date) => {
-  console.log('date', date);
   const [day, month, year] = date.split('-');
   return new Date(`${year}-${month}-${day}`);
 };
 
 const builder = imageUrlBuilder({
-  projectId: [PROJECT_ID], // Your Sanity project ID
-  dataset: DATASET // Your Sanity dataset name
+  projectId: [process.env.REACT_APP_SANITY_PROJECT_ID],
+  dataset: process.env.REACT_APP_SANITY_DATASET
 });
 
 // eslint-disable-next-line react/prop-types
@@ -33,11 +31,8 @@ function ProjectList({ isMobile }) {
 
   useEffect(() => {
     const getProjects = async () => {
-      console.log(PROJECT_ID);
       try {
-        const response = await fetch(
-          `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`
-        );
+        const response = await client.fetch(QUERY);
         let { result } = await response.json();
         if (result.length < 3) {
           while (result.length < 3) {
