@@ -32,7 +32,7 @@ export const ProjectContainer = styled.div`
 `;
 
 export const ProjectImage = styled.img`
-  width: 300px;
+  width: ${(props) => (props.isMobile ? '100%' : '300px')};
   flex-shrink: 0;
   height: 100%;
   background: ${vars.primary_colour};

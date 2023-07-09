@@ -8,10 +8,9 @@ import Skills from './Skills';
 // eslint-disable-next-line react/prop-types
 function Project({ isMobile, name, github, live, description, image, date, skills }) {
   const isPlaceholder = name === 'placeholder';
-  console.log(image);
   return (
     <ProjectContainer isMobile={isMobile}>
-      <ProjectImage src={image} />
+      <ProjectImage src={image} isMobile={isMobile} />
       {!isPlaceholder ? (
         <Flex column={true} grow="1">
           <ProjectInfo>
@@ -36,7 +35,7 @@ function Project({ isMobile, name, github, live, description, image, date, skill
             <ProjectTitle>{name}</ProjectTitle>
           </ProjectInfo>
           <Text grow={1}>{description}</Text>
-          <Flex gap="10px">
+          <Flex gap="10px" flexWrap="wrap">
             {[...skills].map((skill, index) => (
               <Skills key={index} skill={skill} />
             ))}
