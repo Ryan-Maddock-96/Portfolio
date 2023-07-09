@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import Project from './Project';
 import client from '../sanityClient';
 
-const QUERY = encodeURIComponent('*[_type == "project"]');
+const QUERY = '*[_type == "project"]';
 
 const getFormattedDate = (date) => {
   const newDate = new Date(date);
@@ -33,13 +33,14 @@ function ProjectList({ isMobile }) {
     const getProjects = async () => {
       try {
         const response = await client.fetch(QUERY);
-        let { result } = await response.json();
-        if (result.length < 3) {
-          while (result.length < 3) {
-            result.push({ name: 'placeholder' });
+        if (response.length < 3) {
+          while (response.length < 3) {
+            response.push({ name: 'placeholder' });
           }
         }
-        const sortedResults = result.sort((a, b) => convertToDate(b.date) - convertToDate(a.date));
+        const sortedResults = response.sort(
+          (a, b) => convertToDate(b.date) - convertToDate(a.date)
+        );
         setProjectsList(sortedResults);
       } catch (error) {
         console.error('Error retrieving projects:', error);
