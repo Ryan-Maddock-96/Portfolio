@@ -6,11 +6,11 @@ import { Github, ExternalLinkIcon } from './Styles/Icons';
 import Skills from './Skills';
 
 // eslint-disable-next-line react/prop-types
-function Project({ name, github, live, description, image, date, skills }) {
+function Project({ isMobile, name, github, live, description, image, date, skills }) {
   const isPlaceholder = name === 'placeholder';
   console.log(image);
   return (
-    <ProjectContainer>
+    <ProjectContainer isMobile={isMobile}>
       <ProjectImage src={image} />
       {!isPlaceholder ? (
         <Flex column={true} grow="1">

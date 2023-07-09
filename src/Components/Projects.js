@@ -8,7 +8,7 @@ function Projects({ isMobile }) {
   return (
     <ProjectsContainer gap="50px">
       <SectionTitle textAlign="center">Latest Projects</SectionTitle>
-      <ProjectList isMobile={isMobile} isLimited={true} />
+      <ProjectList isMobile={isMobile} />
       <LinkButton to="/work" zindex="-1">
         View All
       </LinkButton>

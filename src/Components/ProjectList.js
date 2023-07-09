@@ -53,10 +53,11 @@ function ProjectList({ isMobile }) {
     <ProjectListContainer isMobile={isMobile}>
       {projectsList.map((proj, index) =>
         proj.name === 'placeholder' ? (
-          <Project key={index} name={proj.name} />
+          <Project key={index} isMobile={isMobile} name={proj.name} />
         ) : (
           <Project
             key={proj._id}
+            isMobile={isMobile}
             name={proj.name}
             description={proj.description}
             image={proj.image && builder.image(proj.image)}
