@@ -21,6 +21,10 @@ export const GlobalStyles = createGlobalStyle`
         background: ${vars.primary_colour};
         font-size: 18px;
     }
+
+    a:visited {
+      color: inherit;
+    }
     
 `;
 
@@ -28,6 +32,7 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   padding: 0 150px ${vars.sectionSpacing};
+  min-height: 100vh;
 
   @media only screen and (max-width: 1200px) {
     padding: 0 50px ${vars.sectionSpacing};
@@ -57,6 +62,7 @@ export const Flex = styled.div`
   ${(props) => props.padding && `padding: ${props.padding}`};
   ${(props) => props.margin && `margin: ${props.margin}`};
   ${(props) => props.borderRadius && `border-radius: ${props.borderRadius}`};
+  ${(props) => props.flexWrap && `flex-wrap: ${props.flexWrap}`};
 `;
 
 export const Link = styled.a`

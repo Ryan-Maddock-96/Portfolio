@@ -11,12 +11,14 @@ import {
 import { Button } from './Styles/Button.style';
 import { useState } from 'react';
 import { useEffect } from 'react';
-
+import { useLocation } from 'react-router-dom';
 // eslint-disable-next-line react/prop-types
 function Navigation({ isMobile }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuOpening, setIsMenuOpening] = useState(false);
   const [isMenuClosing, setIsMenuClosing] = useState(false);
+  const path = useLocation();
+
   const handleMenuClick = () => {
     if (!isMenuOpen) {
       setIsMenuOpening(true);
@@ -43,7 +45,7 @@ function Navigation({ isMobile }) {
 
   useEffect(() => {
     setIsMenuOpen(false);
-  }, [isMobile]);
+  }, [isMobile, path]);
 
   useEffect(() => {
     setIsMenuClosing(isMenuOpen === false);
@@ -57,14 +59,14 @@ function Navigation({ isMobile }) {
       isMobile={isMobile}
       isMenuOpen={isMenuOpen}
       isMenuOpening={isMenuOpening}>
-      <LogoContainer isMenuOpen={isMenuOpen}>
+      <LogoContainer to="/" isMenuOpen={isMenuOpen} isMenuOpening={isMenuOpening}>
         <Logo isMobile={isMobile} isMenuOpen={isMenuOpen} />
       </LogoContainer>
       <NavLinkContainer isMobile={isMobile} isMenuOpen={isMenuOpen}>
         {getMenuIcons()}
         <NavLinkHolder isMenuOpen={isMenuOpen} isMobile={isMobile}>
-          <NavLink>Work</NavLink>
-          <NavLink>About</NavLink>
+          <NavLink to="/work">Work</NavLink>
+          <NavLink to="/about">About</NavLink>
           <Button>Download CV</Button>
         </NavLinkHolder>
       </NavLinkContainer>

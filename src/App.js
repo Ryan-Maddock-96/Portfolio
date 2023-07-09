@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { GlobalStyles, Container } from './Components/Styles/Global.style';
+import { GlobalStyles } from './Components/Styles/Global.style';
 import Navigation from './Components/Navigation';
-import Header from './Components/Header';
 import { useEffect } from 'react';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import Stars from './Components/Stars';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Components/Home';
+import Work from './Components/Work';
+import About from './Components/About';
+import ScrollToTop from './Components/ScrollToTop';
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -29,12 +31,15 @@ const App = () => {
     <div className="App">
       <GlobalStyles />
       <Stars isMobile={isMobile} />
-      <Navigation isMobile={isMobile} />
-      <Container>
-        <Header isMobile={isMobile} />
-        <Projects isMobile={isMobile} />
-        <Contact />
-      </Container>
+      <Router>
+        <ScrollToTop />
+        <Navigation isMobile={isMobile} />
+        <Routes>
+          <Route exact path="/" element={<Home isMobile={isMobile} />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
       <Footer />
     </div>
   );

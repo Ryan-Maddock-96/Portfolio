@@ -6,7 +6,7 @@ export const Header1 = styled.h1`
   font-weight: normal;
   font-style: normal;
   font-weight: 400;
-  margin: 0;
+  margin: ${(props) => props.margin || 0};
   color: ${vars.text_primary_colour};
   text-align: ${(props) => props.textAlign || 'left'};
   white-space: nowrap;

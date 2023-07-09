@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import * as vars from './Variables';
+import { Link } from 'react-router-dom';
 import { menuLinks, fadeIn } from './Animations';
 import { ReactComponent as LogoSVG } from '../../images/logo.svg';
 import { BiMenuAltRight } from 'react-icons/bi';
@@ -14,6 +15,7 @@ export const StyledNav = styled.nav`
   top: 0;
   width: 100%;
   font-size: 24px;
+  z-index: 999;
   height: ${(props) => (props.isMenuOpen ? '100%' : '90px')};
   ${(props) =>
     props.isMobile &&
@@ -67,7 +69,8 @@ export const NavLinkHolder = styled.div`
   gap: 50px;
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
+  text-decoration: none;
   &:before,
   &:after {
     content: '.';
@@ -77,12 +80,12 @@ export const NavLink = styled.a`
   }
 `;
 
-export const LogoContainer = styled.div`
-  z-index: -1;
+export const LogoContainer = styled(Link)`
   ${(props) =>
     props.isMenuOpen &&
     css`
       animation: 1s ease 1s ${fadeIn} forwards;
+      z-index: -1;
     `};
 `;
 

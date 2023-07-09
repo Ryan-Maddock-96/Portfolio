@@ -6,12 +6,12 @@ import { Github, ExternalLinkIcon } from './Styles/Icons';
 import Skills from './Skills';
 
 // eslint-disable-next-line react/prop-types
-function Project({ name, github, description, date, skills }) {
+function Project({ name, github, live, description, image, date, skills }) {
   const isPlaceholder = name === 'placeholder';
-
+  console.log(image);
   return (
     <ProjectContainer>
-      <ProjectImage />
+      <ProjectImage src={image} />
       {!isPlaceholder ? (
         <Flex column={true} grow="1">
           <ProjectInfo>
@@ -19,14 +19,19 @@ function Project({ name, github, description, date, skills }) {
               <Text fontStyle="italic" color={text_secondary_colour} flexGrow="1">
                 {date}
               </Text>
-              <Link href={github} target="_blank">
-                <Github />
-                <Text>Source</Text>
-              </Link>
-              <Link>
-                <ExternalLinkIcon />
-                <Text>Visit</Text>
-              </Link>
+              {github && (
+                <Link href={github} target="_blank">
+                  <Github />
+                  <Text>Source</Text>
+                </Link>
+              )}
+
+              {live && (
+                <Link href={live} target="_blank">
+                  <ExternalLinkIcon />
+                  <Text>Visit</Text>
+                </Link>
+              )}
             </Flex>
             <ProjectTitle>{name}</ProjectTitle>
           </ProjectInfo>

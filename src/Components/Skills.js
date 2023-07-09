@@ -1,5 +1,22 @@
 import { Flex } from './Styles/Global.style';
-import { HTMLIcon, CSSIcon } from './Styles/Icons';
+import {
+  HTMLIcon,
+  CSSIcon,
+  LESSIcon,
+  SASSIcon,
+  JavaScriptIcon,
+  JQueryIcon,
+  TypeScriptIcon,
+  ReactIcon,
+  GitIcon,
+  GulpIcon,
+  NodeIcon,
+  ExpressIcon,
+  SalesforceIcon,
+  SanityIcon,
+  FigmaIcon,
+  PhotoshopIcon
+} from './Styles/Icons';
 import { Text } from './Styles/Text';
 // eslint-disable-next-line react/prop-types
 function Skills({ skill }) {
@@ -14,6 +31,62 @@ function Skills({ skill }) {
     case 'css':
       icon = <CSSIcon />;
       background = '#264DE4';
+      break;
+    case 'less':
+      icon = <LESSIcon />;
+      background = '#1D365D';
+      break;
+    case 'sass':
+      icon = <SASSIcon />;
+      background = '#CF649A';
+      break;
+    case 'javascript':
+      icon = <JavaScriptIcon />;
+      background = '#30312E';
+      break;
+    case 'jquery':
+      icon = <JQueryIcon />;
+      background = '#21ACE2';
+      break;
+    case 'typescript':
+      icon = <TypeScriptIcon />;
+      background = '#2D79C7';
+      break;
+    case 'react':
+      icon = <ReactIcon />;
+      background = '#149ECA';
+      break;
+    case 'git':
+      icon = <GitIcon />;
+      background = '#FB4F28';
+      break;
+    case 'gulp':
+      icon = <GulpIcon />;
+      background = '#CF4647';
+      break;
+    case 'node':
+      icon = <NodeIcon />;
+      background = '#57A645';
+      break;
+    case 'express':
+      icon = <ExpressIcon />;
+      background = '#6A6A6A';
+      break;
+    case 'salesforce':
+      icon = <SalesforceIcon />;
+      background = '#009DDC';
+      break;
+    case 'sanity':
+      icon = <SanityIcon />;
+      background = '#F36456';
+      break;
+    case 'figma':
+      icon = <FigmaIcon />;
+      background = '#A259FF';
+      break;
+    case 'photoshop':
+      icon = <PhotoshopIcon />;
+      background = '#001833';
       break;
   }
   return (

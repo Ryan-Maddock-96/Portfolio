@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 import * as vars from './Variables';
+import { Section } from './Global.style';
+
+export const ProjectsContainer = styled(Section)`
+  padding: 75px;
+  background: #192736;
+  box-shadow: 0px 0px 100px 0px rgba(18, 125, 239, 0.3);
+  border-radius: 40px;
+  ${(props) => props.isMobile && 'width: 100%'};
+`;
 
 export const ProjectListContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 75px;
-  gap: 25px;
-  border-radius: 40px;
-  background: #192736;
-  box-shadow: 0px 0px 100px 0px rgba(18, 125, 239, 0.3);
-  ${(props) => props.isMobile && 'width: 100%'};
+  gap: 50px;
 `;
 
 export const ProjectContainer = styled.div`
@@ -26,11 +30,14 @@ export const ProjectContainer = styled.div`
   z-index: 2;
 `;
 
-export const ProjectImage = styled.div`
+export const ProjectImage = styled.img`
   width: 300px;
+  flex-shrink: 0;
   height: 100%;
   background: ${vars.primary_colour};
   border-radius: 10px;
+  border: none;
+  outline: none;
 `;
 
 export const ProjectInfo = styled.div`
