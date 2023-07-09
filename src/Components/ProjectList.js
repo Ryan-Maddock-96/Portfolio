@@ -4,9 +4,9 @@ import { ProjectListContainer } from './Styles/Project.style';
 import { useEffect } from 'react';
 import Project from './Project';
 
-let PROJECT_ID = '0coyf8rj';
-let DATASET = 'production';
-let QUERY = encodeURIComponent('*[_type == "project"]');
+const PROJECT_ID = process.env.REACT_APP_SANITY_PROJECT_ID;
+const DATASET = process.env.REACT_APP_SANITY_DATASET;
+const QUERY = encodeURIComponent('*[_type == "project"]');
 
 const getFormattedDate = (date) => {
   const newDate = new Date(date);
@@ -33,6 +33,7 @@ function ProjectList({ isMobile }) {
 
   useEffect(() => {
     const getProjects = async () => {
+      console.log(PROJECT_ID);
       try {
         const response = await fetch(
           `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`
