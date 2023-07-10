@@ -43,7 +43,7 @@ export const StyledNav = styled.nav`
     `}
 
   @media only screen and (max-width: 1200px) {
-    padding: 18px 50px;
+    padding: 18px 25px;
   }
 `;
 

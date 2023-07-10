@@ -6,7 +6,7 @@ import { Container } from './Styles/Global.style';
 // eslint-disable-next-line react/prop-types
 function Home({ isMobile }) {
   return (
-    <Container>
+    <Container isMobile={isMobile}>
       <Header isMobile={isMobile} />
       <Projects isMobile={isMobile} />
       <Contact />

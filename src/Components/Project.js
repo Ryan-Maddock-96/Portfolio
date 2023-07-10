@@ -12,7 +12,7 @@ function Project({ isMobile, name, github, live, description, image, date, skill
     <ProjectContainer isMobile={isMobile}>
       <ProjectImage src={image} isMobile={isMobile} />
       {!isPlaceholder ? (
-        <Flex column={true} grow="1">
+        <Flex padding={isMobile && '25px'} column={true} gap="10px" grow="1">
           <ProjectInfo>
             <Flex>
               <Text fontStyle="italic" color={text_secondary_colour} flexGrow="1">

@@ -5,6 +5,10 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  @media only screen and (max-width: 1000px) {
+    padding: 0 25px;
+  }
 `;
 
 export const InputHolder = styled.div``;

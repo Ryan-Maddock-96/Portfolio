@@ -40,7 +40,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
         </Routes>
       </Router>
-      <Footer />
+      <Footer isMobile={isMobile} />
     </div>
   );
 };

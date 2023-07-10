@@ -7,7 +7,9 @@ export const StyledHeader = styled(Section)`
   ${(props) => !props.isMobile && 'height: 98vh'};
   line-height: 70px;
 
-  ${(props) => props.isMobile && 'padding: 120px 25px 50px;'};
+  @media only screen and (max-width: 1000px) {
+    padding: 120px 25px;
+  }
 `;
 
 export const Socials = styled.div`

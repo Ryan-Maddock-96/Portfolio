@@ -34,11 +34,11 @@ export const Container = styled.main`
   padding: 0 150px ${vars.sectionSpacing};
   min-height: 100vh;
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1300px) {
     padding: 0 50px ${vars.sectionSpacing};
   }
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1000px) {
     padding: 0 0 ${vars.sectionSpacing};
   }
 `;
