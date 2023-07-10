@@ -3,10 +3,10 @@ import * as vars from './Variables';
 import { Section } from './Global.style';
 
 export const ProjectsContainer = styled(Section)`
-  padding: 75px;
+  padding: ${(props) => (props.isMobile ? '75px 25px' : '75px')};
   background: #192736;
   box-shadow: 0px 0px 100px 0px rgba(18, 125, 239, 0.3);
-  border-radius: 40px;
+  border-radius: ${(props) => (props.isMobile ? '0' : '40px')};
   ${(props) => props.isMobile && 'width: 100%'};
 `;
 

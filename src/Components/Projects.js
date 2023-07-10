@@ -6,7 +6,7 @@ import { SectionTitle } from './Styles/Text';
 // eslint-disable-next-line react/prop-types
 function Projects({ isMobile }) {
   return (
-    <ProjectsContainer gap="50px">
+    <ProjectsContainer isMobile={isMobile} gap="50px">
       <SectionTitle textAlign="center">Latest Projects</SectionTitle>
       <ProjectList isMobile={isMobile} />
       <LinkButton to="/work" zindex="-1">

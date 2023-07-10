@@ -4,8 +4,10 @@ import { Section } from './Global.style';
 export const StyledHeader = styled(Section)`
   justify-content: center;
   align-items: center;
-  height: 98vh;
+  ${(props) => !props.isMobile && 'height: 98vh'};
   line-height: 70px;
+
+  ${(props) => props.isMobile && 'padding: 120px 25px 50px;'};
 `;
 
 export const Socials = styled.div`

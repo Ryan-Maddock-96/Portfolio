@@ -39,7 +39,7 @@ export const Container = styled.main`
   }
 
   @media only screen and (max-width: 800px) {
-    padding: 0 25px ${vars.sectionSpacing};
+    padding: 0 0 ${vars.sectionSpacing};
   }
 `;
 
