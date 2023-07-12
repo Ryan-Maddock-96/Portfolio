@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     };
 
     * {
+      color: ${vars.text_primary_colour};
       box-sizing: border-box;
       line-height: 120%;
     };
@@ -15,7 +16,6 @@ export const GlobalStyles = createGlobalStyle`
     body {
         padding: 0px;
         margin: 0;
-        color: ${vars.text_primary_colour};
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
         background: ${vars.primary_colour};
