@@ -22,10 +22,11 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 18px;
     }
 
-    a:visited {
+    a:visited,
+    a:hover,
+    a:active {
       color: inherit;
     }
-    
 `;
 
 export const Container = styled.main`
@@ -68,13 +69,14 @@ export const Flex = styled.div`
 export const Link = styled.a`
   display: flex;
   align-items: center;
-
-  &:visited {
-    color: inherit;
-  }
+  color: ${vars.text_primary_colour};
 
   &:hover {
     text-decoration: none;
+
+    svg {
+      color: ${vars.text_primary_colour};
+    }
   }
 
   svg {

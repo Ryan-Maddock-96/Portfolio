@@ -36,8 +36,8 @@ const App = () => {
         <Navigation isMobile={isMobile} />
         <Routes>
           <Route exact path="/" element={<Home isMobile={isMobile} />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/work" element={<Work isMobile={isMobile} />} />
+          <Route path="/about" element={<About isMobile={isMobile} />} />
         </Routes>
       </Router>
       <Footer isMobile={isMobile} />

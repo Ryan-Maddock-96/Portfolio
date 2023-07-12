@@ -19,11 +19,11 @@ function Header({ isMobile }) {
       </Text>
       <Socials>
         <Text>Connect With me:</Text>
-        <Link>
+        <Link href="https://github.com/Ryan-Maddock-96" target="_blank">
           <Github />
           <Text>Github</Text>
         </Link>
-        <Link>
+        <Link href="https://www.linkedin.com/in/ryanmaddock96" target="_blank">
           <Linkedin />
           <Text>Linkedin</Text>
         </Link>

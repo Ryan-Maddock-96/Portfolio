@@ -29,8 +29,8 @@ export const ProjectContainer = styled.div`
   width: 100%;
   background: ${vars.secondary_colour};
   border-radius: 10px;
-  background: #1a2837;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  background: #1c2b3c;
+  box-shadow: rgb(21 33 44) 0px 0px 20px 0px;
   height: ${(props) => (props.isMobile ? '300px' : '350px')};
   border-radius: 10px;
   padding: ${(props) => (props.isMobile ? 0 : '20px 30px')};

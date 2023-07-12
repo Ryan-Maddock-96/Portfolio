@@ -17,7 +17,7 @@ function Navigation({ isMobile }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuOpening, setIsMenuOpening] = useState(false);
   const [isMenuClosing, setIsMenuClosing] = useState(false);
-  const path = useLocation();
+  const location = useLocation();
 
   const handleMenuClick = () => {
     if (!isMenuOpen) {
@@ -43,9 +43,11 @@ function Navigation({ isMobile }) {
     }
   };
 
+  console.log(location);
+
   useEffect(() => {
     setIsMenuOpen(false);
-  }, [isMobile, path]);
+  }, [isMobile, location]);
 
   useEffect(() => {
     setIsMenuClosing(isMenuOpen === false);
@@ -65,8 +67,12 @@ function Navigation({ isMobile }) {
       <NavLinkContainer isMobile={isMobile} isMenuOpen={isMenuOpen}>
         {getMenuIcons()}
         <NavLinkHolder isMenuOpen={isMenuOpen} isMobile={isMobile}>
-          <NavLink to="/work">Work</NavLink>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/work" className={location.pathname === '/work' && 'active'}>
+            Work
+          </NavLink>
+          <NavLink to="/about" className={location.pathname === '/about' && 'active'}>
+            About
+          </NavLink>
           <Button>Download CV</Button>
         </NavLinkHolder>
       </NavLinkContainer>

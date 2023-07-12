@@ -71,6 +71,21 @@ export const NavLinkHolder = styled.div`
 
 export const NavLink = styled(Link)`
   text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+
+  &.active,
+  &:hover {
+    color: ${vars.text_secondary_colour};
+  }
+
+  &.active:before,
+  &.active:after {
+    color: ${vars.text_primary_colour};
+  }
+
   &:before,
   &:after {
     content: '.';

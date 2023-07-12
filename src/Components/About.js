@@ -2,7 +2,8 @@ import Skills from './Skills';
 import { Container, Flex, Section } from './Styles/Global.style';
 import { Header1, Highlight, Text } from './Styles/Text';
 
-function About() {
+// eslint-disable-next-line react/prop-types
+function About({ isMobile }) {
   const allSkills = [
     'HTML',
     'CSS',
@@ -24,7 +25,12 @@ function About() {
   ];
   return (
     <Container>
-      <Section style={{ paddingTop: 'calc(90px + 30px)' }}>
+      <Section
+        style={{
+          paddingTop: 'calc(90px + 30px)',
+          paddingLeft: isMobile ? '25px' : '',
+          paddingRight: isMobile ? '25px' : ''
+        }}>
         <Header1 textAlign="center">About Me</Header1>
         <Text margin="50px 0">
           Hello! I’m Ryan a 26 Year old <Highlight>Front End Developer</Highlight> based in the{' '}
