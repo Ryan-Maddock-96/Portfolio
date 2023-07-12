@@ -8,7 +8,7 @@ export const StyledHeader = styled(Section)`
   line-height: 70px;
 
   @media only screen and (max-width: 1000px) {
-    padding: 120px 25px;
+    padding: 150px 25px;
   }
 `;
 
