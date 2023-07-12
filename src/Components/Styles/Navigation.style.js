@@ -71,6 +71,7 @@ export const NavLinkHolder = styled.div`
 
 export const NavLink = styled(Link)`
   text-decoration: none;
+  color: ${vars.text_primary_colour};
 
   &:visited {
     color: inherit;

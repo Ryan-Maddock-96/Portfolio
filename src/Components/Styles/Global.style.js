@@ -8,7 +8,6 @@ export const GlobalStyles = createGlobalStyle`
     };
 
     * {
-      color: ${vars.text_primary_colour};
       box-sizing: border-box;
       line-height: 120%;
     };
