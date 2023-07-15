@@ -9,7 +9,7 @@ function Home({ isMobile }) {
     <Container isMobile={isMobile}>
       <Header isMobile={isMobile} />
       <Projects isMobile={isMobile} />
-      <Contact />
+      <Contact isMobile={isMobile} />
     </Container>
   );
 }

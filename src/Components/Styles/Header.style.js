@@ -9,6 +9,7 @@ export const StyledHeader = styled(Section)`
 
   @media only screen and (max-width: 1000px) {
     padding: 150px 25px;
+    height: 90vh;
   }
 `;
 

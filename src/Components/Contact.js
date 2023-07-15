@@ -6,7 +6,8 @@ import Input from './Input';
 import { Button } from './Styles/Button.style';
 import { sectionSpacing } from './Styles/Variables';
 
-function Contact() {
+// eslint-disable-next-line react/prop-types
+function Contact({ isMobile }) {
   const formRef = useRef(null);
   const submitHandler = (e) => {
     e.preventDefault();
@@ -20,8 +21,8 @@ function Contact() {
 
   return (
     <Section gap="25px" margin={`${sectionSpacing} 0 0`}>
-      <SectionTitle>Contact Me!</SectionTitle>
-      <Text textAlign="center">
+      <SectionTitle margin={isMobile ? '0 25px' : '0'}>Contact Me!</SectionTitle>
+      <Text margin={isMobile ? '0 25px' : '0'} textAlign="center">
         Please feel free send me a message and I&apos;ll get back to you!
       </Text>
       <StyledForm onSubmit={submitHandler} ref={formRef}>

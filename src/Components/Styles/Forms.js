@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Text } from './Text';
 import * as vars from './Variables';
 
 export const StyledForm = styled.form`
@@ -39,7 +40,7 @@ const DefaultInputStyles = css`
   font-family: 'Poppins', sans-serif;
 `;
 
-export const InputLabel = styled.label`
+export const InputLabel = styled(Text)`
   display: block;
   margin-bottom: 5px;
 `;
