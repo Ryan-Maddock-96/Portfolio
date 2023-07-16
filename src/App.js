@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ReactGA from 'react-ga';
 import { GlobalStyles } from './Components/Styles/Global.style';
 import Navigation from './Components/Navigation';
 import { useEffect } from 'react';
@@ -13,7 +14,12 @@ import ScrollToTop from './Components/ScrollToTop';
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
 
+  ReactGA.initialize(process.env.REACT_GA_TRACKING_ID);
+
   useEffect(() => {
+    // Track Page Views
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 700);
     };

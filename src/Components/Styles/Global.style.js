@@ -20,6 +20,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         background: ${vars.primary_colour};
         font-size: 18px;
+        overflow-x: hidden;
     }
 
     a:visited,

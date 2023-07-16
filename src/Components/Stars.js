@@ -7,20 +7,32 @@ function Stars({ isMobile }) {
   const starV3Count = isMobile ? 8 : 15;
   return (
     <StarContainer>
-      {[...Array(starV3Count)].map(() => (
-        <>
-          <StarV3 leftPos={`${Math.random() * 100}%`} topPos={`${Math.random() * 100}%`} />
-        </>
+      {[...Array(starV3Count)].map((star, index) => (
+        <StarV3
+          key={`starV3-${index}`}
+          leftPos={`${Math.random() * 100}%`}
+          topPos={`${Math.random() * 100}%`}
+        />
       ))}
-      {[...Array(planetCount)].map(() => (
-        <>
-          <Planet leftPos={`${Math.random() * 100}%`} topPos={`${Math.random() * 100}%`} />
-        </>
+      {[...Array(planetCount)].map((planet, index) => (
+        <Planet
+          key={`planet-${index}`}
+          leftPos={`${Math.random() * 100}%`}
+          topPos={`${Math.random() * 100}%`}
+        />
       ))}
-      {[...Array(starCount)].map(() => (
+      {[...Array(starCount)].map((star, index) => (
         <>
-          <Star leftPos={`${Math.random() * 100}%`} topPos={`${Math.random() * 100}%`} />
-          <StarV2 leftPos={`${Math.random() * 100}%`} topPos={`${Math.random() * 100}%`} />
+          <Star
+            key={`star-${index}`}
+            leftPos={`${Math.random() * 100}%`}
+            topPos={`${Math.random() * 100}%`}
+          />
+          <StarV2
+            key={`starV2-${index}`}
+            leftPos={`${Math.random() * 100}%`}
+            topPos={`${Math.random() * 100}%`}
+          />
         </>
       ))}
     </StarContainer>
