@@ -14,7 +14,7 @@ import ScrollToTop from './Components/ScrollToTop';
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
+  ReactGA.initialize('UA-278480193-1');
 
   useEffect(() => {
     // Track Page Views
