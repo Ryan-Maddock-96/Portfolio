@@ -10,7 +10,7 @@ function Project({ isMobile, name, github, live, description, image, date, skill
   const isPlaceholder = name === 'placeholder';
   return (
     <ProjectContainer isMobile={isMobile}>
-      <ProjectImage src={image} isMobile={isMobile} />
+      <ProjectImage src={image} isMobile={isMobile} alt={`${name} Image`} />
       {!isPlaceholder ? (
         <Flex padding={isMobile && '25px'} column={true} gap="10px" grow="1">
           <ProjectInfo>

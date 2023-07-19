@@ -15,7 +15,8 @@ import {
   SalesforceIcon,
   SanityIcon,
   FigmaIcon,
-  PhotoshopIcon
+  PhotoshopIcon,
+  AmplienceIcon
 } from './Styles/Icons';
 import { Text } from './Styles/Text';
 // eslint-disable-next-line react/prop-types
@@ -56,6 +57,10 @@ function Skills({ skill }) {
       icon = <ReactIcon />;
       background = '#149ECA';
       break;
+    case 'styled components':
+      icon = <ReactIcon />;
+      background = '#149ECA';
+      break;
     case 'git':
       icon = <GitIcon />;
       background = '#FB4F28';
@@ -71,6 +76,10 @@ function Skills({ skill }) {
     case 'express':
       icon = <ExpressIcon />;
       background = '#6A6A6A';
+      break;
+    case 'amplience':
+      icon = <AmplienceIcon />;
+      background = '#29333F';
       break;
     case 'salesforce':
       icon = <SalesforceIcon />;

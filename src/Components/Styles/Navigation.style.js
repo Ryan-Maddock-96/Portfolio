@@ -31,7 +31,7 @@ export const StyledNav = styled.nav`
         content: '';
         height: 200vh;
         width: 200vw;
-        position: absolute;
+        position: fixed;
         background: ${vars.secondary_colour};
         top: -55vh;
         right: -55vw;

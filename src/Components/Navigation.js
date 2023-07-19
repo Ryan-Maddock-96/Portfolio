@@ -8,7 +8,7 @@ import {
   MenuIconClosed,
   LogoContainer
 } from './Styles/Navigation.style';
-import { Button } from './Styles/Button.style';
+import { LinkButton } from './Styles/Button.style';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -22,8 +22,10 @@ function Navigation({ isMobile }) {
   const handleMenuClick = () => {
     if (!isMenuOpen) {
       setIsMenuOpening(true);
+      document.body.style.overflow = 'hidden';
     } else {
       setIsMenuClosing(true);
+      document.body.removeAttribute('style');
     }
     setTimeout(() => {
       setIsMenuOpen(isMenuOpen === false);
@@ -43,8 +45,6 @@ function Navigation({ isMobile }) {
     }
   };
 
-  console.log(location);
-
   useEffect(() => {
     setIsMenuOpen(false);
   }, [isMobile, location]);
@@ -61,7 +61,7 @@ function Navigation({ isMobile }) {
       isMobile={isMobile}
       isMenuOpen={isMenuOpen}
       isMenuOpening={isMenuOpening}>
-      <LogoContainer to="/" isMenuOpen={isMenuOpen} isMenuOpening={isMenuOpening}>
+      <LogoContainer to="/" aria-label="home" isMenuOpen={isMenuOpen} isMenuOpening={isMenuOpening}>
         <Logo isMobile={isMobile} isMenuOpen={isMenuOpen} />
       </LogoContainer>
       <NavLinkContainer isMobile={isMobile} isMenuOpen={isMenuOpen}>
@@ -73,7 +73,7 @@ function Navigation({ isMobile }) {
           <NavLink to="/about" className={location.pathname === '/about' && 'active'}>
             About
           </NavLink>
-          <Button>Download CV</Button>
+          <LinkButton>Download CV</LinkButton>
         </NavLinkHolder>
       </NavLinkContainer>
     </StyledNav>

@@ -13,6 +13,7 @@ import { DiLess, DiSass, DiJqueryLogo, DiReact, DiGulp } from 'react-icons/di';
 import { BiLogoJavascript, BiLogoTypescript, BiLogoFigma } from 'react-icons/bi';
 import { SiAdobephotoshop } from 'react-icons/si';
 import { ReactComponent as SanitySVG } from '../../images/sanity.svg';
+import { ReactComponent as AmplienceSVG } from '../../images/amplience.svg';
 import * as vars from './Variables';
 
 const DefaultIconStyles = css`
@@ -91,6 +92,10 @@ export const ExpressIcon = styled(FaNodeJs)`
 `;
 
 export const SalesforceIcon = styled(FaSalesforce)`
+  ${DefaultSkillIconStyles}
+`;
+
+export const AmplienceIcon = styled(AmplienceSVG)`
   ${DefaultSkillIconStyles}
 `;
 

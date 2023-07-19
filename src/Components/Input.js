@@ -6,9 +6,9 @@ function Input({ type, name, labelText }) {
     <InputHolder>
       <InputLabel>{labelText}</InputLabel>
       {type != 'textarea' ? (
-        <StyledInput type={type} name={name} />
+        <StyledInput type={type} name={name} aria-label={labelText} />
       ) : (
-        <StyledTextArea name={name} />
+        <StyledTextArea name={name} aria-label={labelText} />
       )}
     </InputHolder>
   );
