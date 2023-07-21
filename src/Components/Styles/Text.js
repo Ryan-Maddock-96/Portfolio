@@ -12,7 +12,7 @@ export const Header1 = styled.h1`
 
 export const SectionTitle = styled.div`
   display: flex;
-  font-size: max(1vw, 1.5rem);
+  font-size: 1.4rem;
   line-height: 36px;
   font-weight: bold;
   ${(props) => props.margin && `margin: ${props.margin}`};
@@ -25,6 +25,10 @@ export const SectionTitle = styled.div`
     height: 1px;
     flex-grow: 1;
     background: ${vars.text_secondary_colour};
+  }
+
+  @media only screen and (max-width: 800px) {
+    font-size: 1.1rem;
   }
 `;
 

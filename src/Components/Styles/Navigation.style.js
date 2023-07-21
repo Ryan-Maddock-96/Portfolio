@@ -58,6 +58,13 @@ export const NavLinkContainer = styled.div`
 export const NavLinkHolder = styled.div`
   display: ${(props) =>
     !props.isMobile || (props.isMobile && props.isMenuOpen) ? 'flex' : 'none'};
+  ${(props) =>
+    props.isMobile &&
+    props.isMenuOpen &&
+    css`
+      flex-grow: 1;
+      justify-content: center;
+    `};
   opacity: ${(props) => (!props.isMobile ? 1 : 0)};
   flex-direction: ${(props) => (props.isMobile ? 'column' : 'row')};
   ${(props) =>
@@ -106,8 +113,7 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const Logo = styled(LogoSVG)`
-  width: ${(props) => (props.isMobile && !props.isMenuOpen ? '35px' : '50px')};
-  height: ${(props) => (props.isMobile && !props.isMenuOpen ? '35px' : '50px')};
+  font-size: ${(props) => (props.isMobile && !props.isMenuOpen ? '2.5rem' : '3rem')};
 `;
 
 export const MenuIconOpen = styled(BiMenuAltRight)`
