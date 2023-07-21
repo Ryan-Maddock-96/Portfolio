@@ -19,6 +19,44 @@ opacity: 0;}
 opacity: 1; z-index: 1; }
 `;
 
+export const growHeight = keyframes`
+    0% {
+        height: 2px;
+        width: 0;
+        top: -1px;
+        left: 0;
+    }
+
+    25% {
+        width: 100%;
+        right: -1px;
+        left: unset;
+        transform: rotate(90deg);
+    }
+    
+    26%{
+        width: 2px;
+    }
+
+    50%{
+        height: 100%;
+        right:unset;
+    }
+
+    51% {
+        height: 2px;
+        width: -100%;
+    }
+    75% {
+        left: -1px;
+        bottom: unset;
+    }
+    100% {
+        top: -1px;
+        left: unset;
+    }
+`;
+
 export const starAnimation = keyframes`
     0% { font-size: 5px; opacity: 0.3;}
     25% { font-size: 10px; opacity: 0.7 } 

@@ -1,7 +1,7 @@
 import Contact from './Contact';
 import Header from './Header';
-import Projects from './Projects';
-import { Container } from './Styles/Global.style';
+import Projects from '../Projects';
+import { Container } from '../Styles/Global.style';
 
 // eslint-disable-next-line react/prop-types
 function Home({ isMobile }) {

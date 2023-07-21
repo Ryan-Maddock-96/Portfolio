@@ -65,4 +65,7 @@ export const ProjectInfo = styled.div`
   ${(props) => props.isMobile && 'padding: 25px'};
 `;
 
-export const ProjectTitle = styled.h3``;
+export const ProjectTitle = styled.h3`
+  font-size: 1rem;
+  font-weight: bold;
+`;

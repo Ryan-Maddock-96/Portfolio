@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import ReactGA from 'react-ga';
 import { GlobalStyles } from './Components/Styles/Global.style';
-import Navigation from './Components/Navigation';
+import Navigation from './Components/Layout/Navigation';
 import { useEffect } from 'react';
-import Footer from './Components/Footer';
-import Stars from './Components/Stars';
+import Footer from './Components/Layout/Footer';
+import Stars from './Components/Layout/Stars';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import Work from './Components/Work';

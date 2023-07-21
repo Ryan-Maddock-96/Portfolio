@@ -7,8 +7,8 @@ import {
   MenuIconOpen,
   MenuIconClosed,
   LogoContainer
-} from './Styles/Navigation.style';
-import { LinkButton } from './Styles/Button.style';
+} from '../Styles/Navigation.style';
+import { LinkButton } from '../Styles/Button.style';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -47,6 +47,7 @@ function Navigation({ isMobile }) {
 
   useEffect(() => {
     setIsMenuOpen(false);
+    document.body.removeAttribute('style');
   }, [isMobile, location]);
 
   useEffect(() => {

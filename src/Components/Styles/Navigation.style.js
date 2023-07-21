@@ -14,7 +14,7 @@ export const StyledNav = styled.nav`
   position: absolute;
   top: 0;
   width: 100%;
-  font-size: 24px;
+  font-size: 1.5rem;
   z-index: 999;
   height: ${(props) => (props.isMenuOpen ? '100%' : '90px')};
   ${(props) =>
@@ -91,7 +91,7 @@ export const NavLink = styled(Link)`
   &:after {
     content: '.';
     color: ${vars.text_secondary_colour};
-    font-size: 40px;
+    font-size: 3rem;
     line-height: 0;
   }
 `;
@@ -111,12 +111,12 @@ export const Logo = styled(LogoSVG)`
 `;
 
 export const MenuIconOpen = styled(BiMenuAltRight)`
-  font-size: 30px;
+  font-size: 2.5rem;
 `;
 
 export const MenuIconClosed = styled(AiOutlineClose)`
   ${(props) => !props.isMenuOpen && 'display: none'};
-  font-size: 30px;
+  font-size: 2.5rem;
   margin-top: 50px;
   opacity: 0;
   animation: 1s ease-in 1s ${fadeIn} forwards;

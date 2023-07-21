@@ -1,4 +1,4 @@
-import { Planet, Star, StarContainer, StarV2, StarV3 } from './Styles/Stars.style';
+import { Planet, Star, StarContainer, StarV2, StarV3 } from '../Styles/Stars.style';
 
 // eslint-disable-next-line react/prop-types
 function Stars({ isMobile }) {

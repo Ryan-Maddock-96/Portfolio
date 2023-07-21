@@ -1,7 +1,7 @@
-import { Header1, Text, Highlight } from './Styles/Text';
-import { Socials, StyledHeader } from './Styles/Header.style';
-import { Linkedin, Github } from './Styles/Icons';
-import { Link } from './Styles/Global.style';
+import { Header1, Text, Highlight } from '../Styles/Text';
+import { Socials, StyledHeader } from '../Styles/Header.style';
+import { Linkedin, Github } from '../Styles/Icons';
+import { Link } from '../Styles/Global.style';
 
 // eslint-disable-next-line react/prop-types
 function Header({ isMobile }) {

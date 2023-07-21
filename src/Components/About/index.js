@@ -1,6 +1,6 @@
-import Skills from './Skills';
-import { Container, Flex, Section } from './Styles/Global.style';
-import { Header1, Highlight, Text } from './Styles/Text';
+import Skills from '../Skills';
+import { Container, Flex, Section } from '../Styles/Global.style';
+import { Header1, Highlight, Text } from '../Styles/Text';
 
 // eslint-disable-next-line react/prop-types
 function About({ isMobile }) {

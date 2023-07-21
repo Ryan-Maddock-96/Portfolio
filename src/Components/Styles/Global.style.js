@@ -4,23 +4,53 @@ import * as vars from './Variables';
 export const GlobalStyles = createGlobalStyle`
     @font-face {
         font-family: 'Poppins';
-        src: url('../../Fonts/Poppins-Bold.ttf') format('truetype');
+        src: url('../../Fonts/Poppins-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
     };
+    @font-face {
+        font-family: 'Poppins';
+        src: url('../../Fonts/Poppins-Italic.ttf') format('truetype');
+        font-weight: normal;
+        font-style: italic;
+    };
+    @font-face {
+        font-family: 'Poppins';
+        src: url('../../Fonts/Poppins-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    };
+    @font-face {
+        font-family: 'Poppins';
+        src: url('../../Fonts/Poppins-BoldItalic.ttf') format('truetype');
+        font-weight: bold;
+        font-style: italic;
+    };
+    @font-face {
+      font-family: 'Poppins';
+      src: url('../../Fonts/Poppins-ExtraBold.ttf') format('truetype');
+      font-weight: 800;
+      font-style: normal;
+  };
 
     * {
       box-sizing: border-box;
       line-height: 120%;
     };
 
+    html {
+      font-size: 18px;
+      scroll-behavior: smooth;
+    }
+
     body {
         padding: 0px;
         margin: 0;
         color: ${vars.text_primary_colour};
         font-family: 'Poppins', sans-serif;
-        font-weight: 400;
         background: ${vars.primary_colour};
-        font-size: 18px;
         overflow-x: hidden;
+        min-height: 100%;
     }
 
     a:visited,

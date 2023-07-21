@@ -1,10 +1,10 @@
 import { useRef } from 'react';
-import { Section } from './Styles/Global.style';
-import { SectionTitle, Text } from './Styles/Text';
-import { StyledForm, InputContainer } from './Styles/Forms';
-import Input from './Input';
-import { Button } from './Styles/Button.style';
-import { sectionSpacing } from './Styles/Variables';
+import { Section } from '../Styles/Global.style';
+import { SectionTitle, Text } from '../Styles/Text';
+import { StyledForm, InputContainer } from '../Styles/Forms';
+import Input from '../Input';
+import { Button } from '../Styles/Button.style';
+import { sectionSpacing } from '../Styles/Variables';
 
 // eslint-disable-next-line react/prop-types
 function Contact({ isMobile }) {

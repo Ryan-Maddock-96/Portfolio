@@ -1,6 +1,6 @@
-import { Button } from './Styles/Button.style';
-import { StyledFooter } from './Styles/Footer.style';
-import { Text, Highlight } from './Styles/Text';
+import { Button } from '../Styles/Button.style';
+import { StyledFooter } from '../Styles/Footer.style';
+import { Text, Highlight } from '../Styles/Text';
 // eslint-disable-next-line react/prop-types
 function Footer({ isMobile }) {
   return (

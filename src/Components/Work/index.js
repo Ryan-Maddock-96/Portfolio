@@ -1,6 +1,6 @@
-import ProjectList from './ProjectList';
-import { Container, Section } from './Styles/Global.style';
-import { Header1 } from './Styles/Text';
+import ProjectList from '../ProjectList';
+import { Container, Section } from '../Styles/Global.style';
+import { Header1 } from '../Styles/Text';
 
 // eslint-disable-next-line react/prop-types
 function Work({ isMobile }) {
