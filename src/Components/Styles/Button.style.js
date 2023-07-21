@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import * as vars from './Variables';
-import { Link } from 'react-router-dom';
 
 export const Button = styled.button`
   position: relative;
@@ -29,7 +28,7 @@ export const Button = styled.button`
   }
 `;
 
-export const LinkButton = styled(Button).attrs({ as: Link })`
+export const LinkButton = styled(Button).attrs({ as: 'a' })`
   text-decoration: none;
   text-align: center;
 `;

@@ -74,7 +74,9 @@ function Navigation({ isMobile }) {
           <NavLink to="/about" className={location.pathname === '/about' && 'active'}>
             About
           </NavLink>
-          <LinkButton>Download CV</LinkButton>
+          <LinkButton href="../../Files/cv.docx" download>
+            Download CV
+          </LinkButton>
         </NavLinkHolder>
       </NavLinkContainer>
     </StyledNav>
