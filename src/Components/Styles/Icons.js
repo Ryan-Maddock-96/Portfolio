@@ -12,12 +12,12 @@ import {
 import { DiLess, DiSass, DiJqueryLogo, DiReact, DiGulp } from 'react-icons/di';
 import { BiLogoJavascript, BiLogoTypescript, BiLogoFigma } from 'react-icons/bi';
 import { SiAdobephotoshop } from 'react-icons/si';
-import { ReactComponent as SanitySVG } from '../../images/sanity.svg';
-import { ReactComponent as AmplienceSVG } from '../../images/amplience.svg';
+import { ReactComponent as SanitySVG } from '../../Files/images/sanity.svg';
+import { ReactComponent as AmplienceSVG } from '../../Files/images/amplience.svg';
 import * as vars from './Variables';
 
 const DefaultIconStyles = css`
-  font-size: 20px;
+  font-size: 1.2rem;
   color: ${vars.text_secondary_colour};
   vertical-align: middle;
   margin: 0 5px 0 10px;
@@ -38,7 +38,7 @@ export const ExternalLinkIcon = styled(FaExternalLinkSquareAlt)`
 // Skill Icons
 
 const DefaultSkillIconStyles = css`
-  font-size: 18px;
+  font-size: 1rem;
   color: #fff;
   margin-right: 10px;
 `;

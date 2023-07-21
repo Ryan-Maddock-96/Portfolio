@@ -32,7 +32,7 @@ const DefaultInputStyles = css`
   background: ${vars.text_primary_colour};
   border-radius: 5px;
   resize: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   width: 100%;
   outline: none;
   padding: 5px 10px;

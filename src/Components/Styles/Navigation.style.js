@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import * as vars from './Variables';
 import { Link } from 'react-router-dom';
 import { menuLinks, fadeIn } from './Animations';
-import { ReactComponent as LogoSVG } from '../../images/logo.svg';
+import { ReactComponent as LogoSVG } from '../../Files/images/logo.svg';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -14,7 +14,7 @@ export const StyledNav = styled.nav`
   position: absolute;
   top: 0;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   z-index: 999;
   height: ${(props) => (props.isMenuOpen ? '100%' : '90px')};
   ${(props) =>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import * as vars from './Variables';
 
 export const Header1 = styled.h1`
-  font-size: clamp(1.4rem, 5.5vw, 3.5rem);
+  font-size: clamp(1.4rem, 5.5vw, 3rem);
   font-weight: bold;
   margin: ${(props) => props.margin || 0};
   color: ${vars.text_primary_colour};
@@ -47,5 +47,5 @@ export const Text = styled.span`
   line-height: ${(props) => (props.lineHeight ? props.lineHeight : '180%')};
   text-align: ${(props) => props.textAlign || 'left'};
   weight: ${(props) => props.weight || 400};
-  font-size: clamp(14px, 1.5vw, 18px);
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
 `;

@@ -27,10 +27,6 @@ export const Button = styled.button`
       left: -2px;
     }
   }
-
-  @media only screen and (max-width: 1000px) {
-    font-size: 14px;
-  }
 `;
 
 export const LinkButton = styled(Button).attrs({ as: Link })`
