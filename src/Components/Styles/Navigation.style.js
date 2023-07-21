@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import * as vars from './Variables';
 import { Link } from 'react-router-dom';
-import { menuLinks, fadeIn } from './Animations';
+import { menuLinks, fadeIn, dash } from './Animations';
 import { ReactComponent as LogoSVG } from '../../Files/images/logo.svg';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -114,6 +114,11 @@ export const LogoContainer = styled(Link)`
 
 export const Logo = styled(LogoSVG)`
   font-size: ${(props) => (props.isMobile && !props.isMenuOpen ? '2.5rem' : '3rem')};
+
+  &:hover path {
+    stroke: ${vars.text_secondary_colour};
+    animation: ${dash} 7s linear forwards;
+  }
 `;
 
 export const MenuIconOpen = styled(BiMenuAltRight)`

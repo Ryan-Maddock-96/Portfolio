@@ -8,7 +8,7 @@ import {
   MenuIconClosed,
   LogoContainer
 } from '../Styles/Navigation.style';
-import { LinkButton } from '../Styles/Button.style';
+import { DownloadButton } from '../Styles/Button.style';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -74,9 +74,9 @@ function Navigation({ isMobile }) {
           <NavLink to="/about" className={location.pathname === '/about' && 'active'}>
             About
           </NavLink>
-          <LinkButton href="../../Files/cv.docx" download>
+          <DownloadButton href="../../Files/cv.docx" download>
             Download CV
-          </LinkButton>
+          </DownloadButton>
         </NavLinkHolder>
       </NavLinkContainer>
     </StyledNav>

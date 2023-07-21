@@ -34,3 +34,13 @@ export const starAnimation2 = keyframes`
     75% { font-size: 5px; opacity: 0.3; }
     100% { font-size: 10px; opacity: 0.7}
 `;
+
+export const dash = keyframes`
+    from {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+`;
