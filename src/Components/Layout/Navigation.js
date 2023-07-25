@@ -11,12 +11,13 @@ import {
 import { DownloadButton } from '../Styles/Button.style';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 // eslint-disable-next-line react/prop-types
 function Navigation({ isMobile }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuOpening, setIsMenuOpening] = useState(false);
   const [isMenuClosing, setIsMenuClosing] = useState(false);
+  const navigate = useNavigate();
   const location = useLocation();
 
   const handleMenuClick = () => {
@@ -62,8 +63,12 @@ function Navigation({ isMobile }) {
       isMobile={isMobile}
       isMenuOpen={isMenuOpen}
       isMenuOpening={isMenuOpening}>
-      <LogoContainer to="/" aria-label="home" isMenuOpen={isMenuOpen} isMenuOpening={isMenuOpening}>
-        <Logo isMobile={isMobile} isMenuOpen={isMenuOpen} />
+      <LogoContainer
+        onClick={() => navigate('/')}
+        aria-label="home"
+        isMenuOpen={isMenuOpen}
+        isMobile={isMobile}>
+        <Logo />
       </LogoContainer>
       <NavLinkContainer isMobile={isMobile} isMenuOpen={isMenuOpen}>
         {getMenuIcons()}

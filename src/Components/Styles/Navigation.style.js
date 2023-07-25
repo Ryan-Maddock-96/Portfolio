@@ -27,6 +27,7 @@ export const StyledNav = styled.nav`
   ${(props) =>
     props.isMobile &&
     css`
+      background-color: ${vars.secondary_colour};
       &:before {
         content: '';
         height: 200vh;
@@ -103,18 +104,17 @@ export const NavLink = styled(Link)`
   }
 `;
 
-export const LogoContainer = styled(Link)`
+export const LogoContainer = styled.a`
   ${(props) =>
     props.isMenuOpen &&
     css`
       animation: 1s ease 1s ${fadeIn} forwards;
       z-index: -1;
     `};
+  font-size: ${(props) => (props.isMobile && !props.isMenuOpen ? '2.5rem' : '3rem')};
 `;
 
 export const Logo = styled(LogoSVG)`
-  font-size: ${(props) => (props.isMobile && !props.isMenuOpen ? '2.5rem' : '3rem')};
-
   &:hover path {
     stroke: ${vars.text_secondary_colour};
     animation: ${dash} 7s linear forwards;

@@ -19,6 +19,13 @@ opacity: 0;}
 opacity: 1; z-index: 1; }
 `;
 
+export const fadeOut = keyframes`
+ 0% {
+opacity: 1;}
+ 100% {
+opacity: 0; }
+`;
+
 export const starAnimation = keyframes`
     0% { font-size: 5px; opacity: 0.3;}
     25% { font-size: 10px; opacity: 0.7 } 
@@ -42,5 +49,14 @@ export const dash = keyframes`
     }
     to {
         stroke-dashoffset: 0;
+    }
+`;
+
+export const scaleIn = keyframes`
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
     }
 `;

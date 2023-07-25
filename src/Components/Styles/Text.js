@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import * as vars from './Variables';
+import { scaleIn, fadeIn } from './Animations';
 
 export const Header1 = styled.h1`
   font-size: clamp(1.4rem, 5.5vw, 3rem);
@@ -8,6 +9,7 @@ export const Header1 = styled.h1`
   color: ${vars.text_primary_colour};
   text-align: ${(props) => props.textAlign || 'left'};
   white-space: nowrap;
+  animation: 0.5s ${scaleIn} forwards;
 `;
 
 export const SectionTitle = styled.div`
@@ -48,6 +50,12 @@ export const Text = styled.span`
   ${(props) => props.fontStyle && `font-style: ${props.fontStyle}`};
   ${(props) => props.maxWidth && `max-width: ${props.maxWidth}`};
   ${(props) => props.flexGrow && `flex-grow: ${props.flexGrow}`};
+  ${(props) =>
+    props.fadeIn &&
+    css`
+      animation: 1s 0.5s ${fadeIn} forwards;
+      opacity: 0;
+    `};
   line-height: ${(props) => (props.lineHeight ? props.lineHeight : '180%')};
   text-align: ${(props) => props.textAlign || 'left'};
   weight: ${(props) => props.weight || 400};

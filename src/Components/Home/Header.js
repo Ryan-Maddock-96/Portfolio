@@ -12,7 +12,7 @@ function Header({ isMobile }) {
         <br /> a passioniate <Highlight weight="bold">Front End Developer</Highlight> <br /> based
         in the <Highlight weight="bold">UK</Highlight>
       </Header1>
-      <Text textAlign="center" margin="15px 0" maxWidth="855px">
+      <Text textAlign="center" margin="15px 0" maxWidth="855px" fadeIn={true}>
         With a degree in Web Design and Development and over 6 years commercial experience in
         front-end development, I strive to create user-friendly and visually appealing digital
         experiences.

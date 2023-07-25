@@ -23,8 +23,8 @@ export const Button = styled.button`
       height: 100%;
       width: 100%;
       position: absolute;
-      top: -2px;
-      left: -2px;
+      top: -3px;
+      left: -3px;
     }
   }
 `;
