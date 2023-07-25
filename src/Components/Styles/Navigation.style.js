@@ -105,6 +105,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const LogoContainer = styled.a`
+  cursor: pointer;
   ${(props) =>
     props.isMenuOpen &&
     css`
