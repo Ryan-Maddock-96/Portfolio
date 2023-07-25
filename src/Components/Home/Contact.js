@@ -1,13 +1,15 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Section } from '../Styles/Global.style';
 import { SectionTitle, Text } from '../Styles/Text';
 import { StyledForm, InputContainer } from '../Styles/Forms';
 import Input from '../Input';
 import { Button } from '../Styles/Button.style';
 import { sectionSpacing } from '../Styles/Variables';
+import { AiFillExclamationCircle } from 'react-icons/ai';
 
 // eslint-disable-next-line react/prop-types
 function Contact({ isMobile }) {
+  const [isError, setIsError] = useState(false);
   const formRef = useRef(null);
   const submitHandler = (e) => {
     e.preventDefault();
@@ -16,6 +18,11 @@ function Contact({ isMobile }) {
     const name = data.get('name');
     const subject = data.get('subject');
     const message = data.get('message');
+    if (name === '' || subject === '' || message === '') {
+      setIsError(true);
+      return;
+    }
+    setIsError(false);
     window.location.href = `mailto:RyanMaddockDev@hotmail.com?subject=Portfolio Message from - ${name} - ${subject}&body=${message}`;
   };
 
@@ -31,6 +38,11 @@ function Contact({ isMobile }) {
           <Input type="text" name="subject" labelText="Subject:" />
         </InputContainer>
         <Input type="textarea" name="message" labelText="Message:" />
+        {isError && (
+          <Text background="#d83a3a" color="#fff" padding="5px 10px" borderRadius="5px">
+            <AiFillExclamationCircle /> Please fill out each field!
+          </Text>
+        )}
         <Button type="submit">Send</Button>
       </StyledForm>
     </Section>

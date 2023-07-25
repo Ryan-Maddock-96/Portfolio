@@ -45,7 +45,10 @@ export const Text = styled.span`
   font-weight: ${(props) => (props.weight ? props.weight : 400)};
   letter-spacing: 0.9px;
   ${(props) => props.margin && `margin: ${props.margin}`};
+  ${(props) => props.padding && `padding: ${props.padding}`};
   ${(props) => props.color && `color: ${props.color}`};
+  ${(props) => props.background && `background: ${props.background}`};
+  ${(props) => props.borderRadius && `border-radius: ${props.borderRadius}`};
   ${(props) => props.grow && `flex-grow: ${props.grow}`};
   ${(props) => props.fontStyle && `font-style: ${props.fontStyle}`};
   ${(props) => props.maxWidth && `max-width: ${props.maxWidth}`};
@@ -60,4 +63,8 @@ export const Text = styled.span`
   text-align: ${(props) => props.textAlign || 'left'};
   weight: ${(props) => props.weight || 400};
   font-size: clamp(0.75rem, 1.5vw, 1rem);
+
+  svg {
+    vertical-align: middle;
+  }
 `;
