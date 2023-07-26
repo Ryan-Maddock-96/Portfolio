@@ -27,7 +27,6 @@ export const StyledNav = styled.nav`
   ${(props) =>
     props.isMobile &&
     css`
-      background-color: ${vars.secondary_colour};
       &:before {
         content: '';
         height: 200vh;
