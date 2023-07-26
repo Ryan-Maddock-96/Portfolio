@@ -1,5 +1,5 @@
 ## **Overview**
-This is the repository for my personal portfolio found at *COMING SOON*.
+This is the repository for my personal portfolio found at http://ryanmaddock.co.uk/.
 
 ## Running the app locally
 This app was created using create-react-app.
